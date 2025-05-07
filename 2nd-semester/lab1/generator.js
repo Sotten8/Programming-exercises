@@ -40,14 +40,10 @@ const weekDay = weekIter[Symbol.iterator]();
 // print(1000);
 
 const printDay = async (ms) => {
-  for (const day of weekDay) {
+  for (const day of weekIter) {
     await new Promise((resolve) => setTimeout(resolve, ms));
     console.log(day);
   }
 };
 
 printDay(1000);
-
-// for (const day of weekDay) {
-//   console.log({ day });
-// }
