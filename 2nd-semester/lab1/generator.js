@@ -13,8 +13,8 @@ const WEEK = [
 const weekGen = function* (array) {
   let day = 0;
   while (true) {
-    if (day > 6) day = 0;
     yield array[day++];
+    day = day++ % array.length;
   }
 };
 
@@ -40,7 +40,7 @@ const weekDay = weekIter[Symbol.iterator]();
 // print(1000);
 
 const printDay = async (ms) => {
-  for (const day of weekIter) {
+  for (const day of weekDay) {
     await new Promise((resolve) => setTimeout(resolve, ms));
     console.log(day);
   }
