@@ -1,0 +1,12 @@
+{
+  "name": "lab_4",
+  "version": "1.0.0",
+  "description": "Implementation of the Bi-Directional Priority Queue",
+  "license": "MIT",
+  "author": "Stanislav",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
